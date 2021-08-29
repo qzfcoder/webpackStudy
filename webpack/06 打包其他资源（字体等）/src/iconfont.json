@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "23880811",
+      "name": "部门概况",
+      "font_class": "bumengaikuang",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "23880812",
+      "name": "技术转移",
+      "font_class": "jishuzhuanyi",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "23880821",
+      "name": "业务流程",
+      "font_class": "yewuliucheng",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "23899970",
+      "name": "学位",
+      "font_class": "xuewei",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}
