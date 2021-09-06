@@ -18,3 +18,18 @@
 - 从广义上来讲，JavaScript中的函数都是闭包
 - 从狭义上来讲，JavaScript中一个函数，如果访问了外层作用域的变量，那么他就是一个闭包
 
+
+
+```js
+//js闭包就是有两部分组成的，本是是一个函数+可以访问的自由变量
+function foo() {
+  var name = "foo"
+  function bar() {
+    console.log('bar', name)
+  }
+  return bar
+}
+var fn = foo()
+fn()
+```
+

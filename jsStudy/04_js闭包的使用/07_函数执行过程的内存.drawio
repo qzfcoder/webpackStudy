@@ -1,0 +1,121 @@
+<mxfile host="65bd71144e">
+    <diagram id="kyrZLVaGOYMyHXISNj9q" name="第 1 页">
+        <mxGraphModel dx="1118" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="80" width="790" height="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="date&lt;br&gt;string&lt;br&gt;window&lt;br&gt;准备执行之前，进行解析&lt;br&gt;foo：undefined&amp;nbsp;-&amp;gt;内存地址&lt;br&gt;fn:undefined&amp;nbsp;-&amp;gt;内存地址-&amp;gt;0xb00" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="401" y="140" width="189" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="go对象(0x100)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="110" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="90" width="250" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="ECStak(调用栈)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="580" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="全局执行上下文" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="540" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="vo： go" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="600" width="65" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="230" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="foo函数对象（0xa00）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="270" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="300" width="155" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="parentScope: go(0x100)&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22590%22%20y%3D%22170%22%20width%3D%22120%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22go%E5%AF%B9%E8%B1%A1%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22440%22%20y%3D%22200%22%20width%3D%2250%22%20height%3D%2220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E：go&lt;/span&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="310" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="函数执行体" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="340" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="380" width="205" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="函数执行上下文foo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="345" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="name：undefined -&amp;gt; foo&lt;br&gt;age：undefined -&amp;gt; 18&lt;br&gt;bar：&lt;span&gt;0xb00&lt;/span&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="150" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="ao对象(0x200)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="120" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="87.5" y="390" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="390" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="VO: AO(OX200)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="87.5" y="400" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="87.5" y="450" width="172.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="var name = 'foo&lt;br&gt;var age = 18&lt;br&gt;返回 0xb00" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="445" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="执行完后被销毁,返回了0xb" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="500" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="bar函数对象（0xb00）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="270" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="615" y="300" width="155" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="parentScope: ao(0x100)&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22590%22%20y%3D%22170%22%20width%3D%22120%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22go%E5%AF%B9%E8%B1%A1%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22440%22%20y%3D%22200%22%20width%3D%2250%22%20height%3D%2220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E：go&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="310" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="函数执行体" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="340" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="71.25" y="170" width="205" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="函数执行上下文bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="76.25" y="135" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="83.75" y="180" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="76.25" y="180" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="VO: AO(OX300)&lt;br&gt;scopechain: AP +parebtScope(foo)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="73.75" y="190" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="83.75" y="240" width="172.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="var name = 'foo&lt;br&gt;var age = 18" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="96.25" y="245" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="执行完后被销毁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="86.25" y="290" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="name：undefined -&amp;gt; foo&lt;br&gt;age：undefined -&amp;gt; 18&lt;br&gt;bar：&lt;span&gt;0xb00&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="930" y="150" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="ao对象(0x300)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="910" y="120" width="90" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
