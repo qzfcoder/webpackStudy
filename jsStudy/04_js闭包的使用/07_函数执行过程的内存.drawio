@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="kyrZLVaGOYMyHXISNj9q" name="第 1 页">
-        <mxGraphModel dx="1118" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1374" dy="291" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -103,8 +103,8 @@
                 <mxCell id="46" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="83.75" y="240" width="172.5" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="var name = 'foo&lt;br&gt;var age = 18" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="96.25" y="245" width="100" height="30" as="geometry"/>
+                <mxCell id="47" value="console.log" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="106.25" y="250" width="80" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="执行完后被销毁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
                     <mxGeometry x="86.25" y="290" width="100" height="20" as="geometry"/>
