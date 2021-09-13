@@ -30,6 +30,7 @@ module.exports = {
               name: '[hash:10].[ext]',
               esModule: false
           }
+      }
     ]
   },
   plugins: [
