@@ -43,7 +43,7 @@ git commit 将文件提交进入 stage中 文件状态变更为已暂存
 
 ### git基本图解
 
-![image-20210829144813420](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829144813420.png)
+![image-20210829144813420.png](https://i.loli.net/2021/09/15/5RcKuZW8JyxLsYG.png)
 
 本地仓库书相对于远程仓库而言的
 
@@ -88,7 +88,7 @@ git push -u origin master 把仓库区的文件提交到远程仓库里。
 
 
 
-![image-20210829150833271](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829150833271.png)
+![image-20210829150833271.png](https://i.loli.net/2021/09/15/L21kOQPi38Cvecl.png)
 
 在没有其他分支插进来时，只有一个master主分支。每次你`git push -u origin master` 提交就是增加一条时间轴，master也会跟着移动。
 
@@ -96,7 +96,7 @@ git push -u origin master 把仓库区的文件提交到远程仓库里。
 
 
 
-![image-20210829150859292](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829150859292.png)
+![image-20210829150859292.png](https://i.loli.net/2021/09/15/2omS8Yja6PMDzfJ.png)
 
 通过git branch命令可以查看当前目录下有什么分支，通过git branch xxxx 可以来创建一个新的分支。我们通过git branch other来创建一个other的分支，通过other提交，虽然时间轴向前走了，但是主分支master还在原来的位置。这时候我们也可以通过 git push origin 分支名字来提交代码推送到远端服务器上
 
@@ -104,7 +104,7 @@ git push -u origin master 把仓库区的文件提交到远程仓库里。
 
 
 
-![image-20210829150918615](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829150918615.png)
+![image-20210829151056944.png](https://i.loli.net/2021/09/15/flhjYwxH1VJO7Ug.png)
 
 
 
@@ -167,7 +167,7 @@ git branch -d other
 
 
 
-![image-20210829151037546](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829151037546.png)
+![image-20210829151037546.png](https://i.loli.net/2021/09/15/XRlAEIyfqQVSpaC.png)
 
 假如有这样一种情况，分支`other`已经`commit`了，**但是**此时指针指回`master`时，并且`master`没有合并，而是`git add / commit` 提交了。这样，就产生了冲突，主分支`master`文件内容与`other`分支的内容不一样。合并不起来！所以，
 
@@ -179,7 +179,7 @@ git branch -d other
 
 - 分支合并了。
 
-  ![image-20210829151056944](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829151056944.png)
+  ![image-20210829151056944.png](https://i.loli.net/2021/09/15/flhjYwxH1VJO7Ug.png)
 
 - `git log --graph` 查看分支合并图
 
@@ -214,7 +214,7 @@ git branch -d other
 
 
 
-![image-20210829151109524](C:\Users\86730\AppData\Roaming\Typora\typora-user-images\image-20210829151109524.png)
+![image-20210829151109524.png](https://i.loli.net/2021/09/15/sNf6dQ1GcxVKAS3.png)
 
 产生上图的冲突时，
 
