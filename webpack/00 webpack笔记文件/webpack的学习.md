@@ -4,6 +4,11 @@ webpack：是一种前端资源构建工具，一个静态模态打包器
 
 静态模块一般为 js jq less sass等将这些当作一个模块来处理，进行打包生成对应的静态资源
 
+```bash
+npm init -y
+npm install webpack webpack-cli --save-dev
+```
+
 ## webpack五个核心概念
 
 ### entry

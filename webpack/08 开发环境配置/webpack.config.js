@@ -64,6 +64,9 @@ module.exports = {
   mode: 'development',
   devServer: {
     // contentBase: resolve(__dirname, 'build'),  //不知道为什么我这里这个contentBase使用不了，找不到这个标签
+    static: {
+      directory: path.join(__dirname, 'build'),
+    },
     compress: true,
     port: 3000,
     open: true

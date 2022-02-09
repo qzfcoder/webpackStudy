@@ -73,7 +73,7 @@ data() {
               succFun(json.data[0]);
           };
           formData = new FormData();
-          formData.append('file', file, file.name );//此处与源文档不一样
+          formData.append('file', file, file.name );// 此处与源文档不一样
           xhr.send(formData);
         },
         file_picker_callback: function(callback, value, meta) {
