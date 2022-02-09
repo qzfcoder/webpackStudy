@@ -1,0 +1,35 @@
+{
+  "name": "webpack_build",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.6.5",
+    "html-loader": "^3.1.0",
+    "url-loader": "^4.1.1",
+    "vue": "^3.2.30",
+    "vue-router": "^4.0.0-0",
+    "vue3-runtime-template": "^1.0.2",
+    "webpack": "^5.68.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "vue-loader": "^17.0.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
