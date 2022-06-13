@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script>
+      // d3可以通过select和selectAll来选择body中的数据对象,
+      // 然后可以对该对象进行操作
+      // let p = d3.select("body").selectAll("p");
+      let p = d3.select("p")
+      p.text("xxx~~~");
+    </script>
+  </body>
+</html>

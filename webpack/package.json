@@ -18,8 +18,13 @@
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.3.2",
+<<<<<<< HEAD
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2",
+=======
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+>>>>>>> ee97d879bb1d4e4b725acdf515551405b73e68e9
     "webpack-dev-server": "^4.0.0"
   }
 }

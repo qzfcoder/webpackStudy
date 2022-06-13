@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <body>
+    <svg></svg>
+    <script>
+      var margin = { top: 80, bottom: 60, left: 70, right: 60 }; //用于设定表格的位置
+      var dataset = [];
+      for (var i = 0; i < 20; ++i) dataset[i] = Math.random() * 600;
+      var svg = d3
+        .select("svg")
+        .attr("width", window.innerWidth)
+        .attr("height", window.innerHeight);
+      //↑将svg画布充满整个屏幕，当然也可自行调整，注意：如果svg过小，可能里面的内容显示不全，所以需要注意
+      var g = svg
+        .append("g") //可以理解为把svg与g绑定在一起
+        .attr("transform", "translate(" + margin.top + "," + margin.left + ")"); //设定左上角位置
+      var height = 0.8 * window.innerHeight,
+        width = 0.8 * window.innerWidth;
+      var rectWidth = width / dataset.length; //每个柱子的宽度
+      g.selectAll("rect")
+        .data(dataset) //选中所有的rect对象进行操作
+        .enter() //由于都是新生成的，所以当然要用enter()了,这是上一节内容。
+        .append("rect") //自动补充rect对象与数据进行绑定
+        .attr("x", function (d, i) {
+          return i * rectWidth;
+        })
+        .attr("y", function (d, i) {
+          //由于高度是从上往下延伸的，所以柱子y轴开始的地方应该是它的顶端
+          console.log(height, d);
+          return height - d;
+        })
+        .attr("width", rectWidth * 0.9)
+        .attr("height", function (d) {
+          return d;
+        })
+        .attr("fill", "blue"); //颜色
+    </script>
+  </body>
+</html>

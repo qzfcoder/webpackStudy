@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <span></span>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script>
+      var str = "test";
+      var p = d3.select("body").selectAll("p");
+      //data() : 把一个数组绑定到一个选择的对象上，进行 一一对应。
+      // datum() : 把一个数据绑定到 所有选择集 上。
+      // var span = d3.select("span");
+      // var dataSet = ['1','2','3']
+      // span.data(dataSet).text(function (d, i) {
+      //   return `这是我${i},${d}`;
+      // });
+      // p.datum(str).text(function (d, i) {
+      //   return `这是我${i},${d}`;
+      // });
+
+      // 数据多时
+      var dataset = ["甘雨", "诺艾尔", "砂糖", "芭芭拉", "莫娜"];
+      var p = d3.select("body").selectAll("p");
+      var update = p.data(dataset);
+      var enter = update.enter();
+      update.text(function (d, i) {
+        return "我的第" + i + "个:" + d;
+      });
+      var pEnter = enter.append("p");
+      pEnter.text(function (d, i) {
+        return "我的第" + i + "个:" + d;
+      });
+    </script>
+  </body>
+</html>

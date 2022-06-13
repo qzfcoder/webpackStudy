@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="myP"></p>
+    <p></p>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script>
+      let dataset = [1, 2, 3, 4, 5, 6];
+      let p = d3.select("body").selectAll("p");
+      // .selecAll(".myP");
+      var update = p.data(dataset);
+      var enter = update.enter();
+      update.text(function (d, i) {
+        if (i == 1) d3.select(this).style("color", "blue");
+        return "我的第" + i + ":" + d;
+      });
+      var d = d3
+        .select("body")
+        .append("p")
+        .text("优菈！！")
+        .style("color", "blue");
+
+      // 删除 .remove();
+    </script>
+  </body>
+</html>
