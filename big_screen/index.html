@@ -22,6 +22,7 @@
           <div class="xpanel-wrapper xpanel-wrapper-40">
             <div class="xpanel xpanel-l-t">
               <div class="title">1</div>
+              <div class="fill-h" id="frist"></div>
             </div>
           </div>
           <div class="xpanel-wrapper xpanel-wrapper-60">
@@ -37,27 +38,341 @@
             </div>
           </div>
           <div class="xpanel-wrapper xpanel-wrapper-75">
-            <div class="xpanel no-bg"></div>
+            <div class="xpanel no-bg">
+              <div class="fill-h" id="flyMap"></div>
+            </div>
           </div>
         </div>
         <div class="col col-r">
-          <div class="xpanel-wrapper xpanel-wrapper-25">
+          <div class="xpanel-wrapper xpanel-wrapper-40">
             <div class="xpanel xpanel-r-t">
               <div class="title">4</div>
+              <div class="fill-h" id="pie"></div>
             </div>
           </div>
-          <div class="xpanel-wrapper xpanel-wrapper-30">
+          <div class="xpanel-wrapper xpanel-wrapper-60">
             <div class="xpanel xpanel-r-m">
               <div class="title">5</div>
             </div>
           </div>
-          <div class="xpanel-wrapper xpanel-wrapper-45">
+          <!-- <div class="xpanel-wrapper xpanel-wrapper-45">
             <div class="xpanel xpanel-r-b">
               <div class="title">6</div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/echarts-3.8.5.min.js"></script>
+    <script type="text/javascript" src="js/echarts-map-world.js"></script>
+    <script type="text/javascript" src="js/echarts-map-china.js"></script>
+    <script
+      type="text/javascript"
+      src="js/echarts-china-provinces/jiangsu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/echarts-china-cities/jiang1_su1_su1_zhou1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/echarts-china-counties/jiang1su1_su1zhou1_kun1shan1shi4.js"
+    ></script>
+    <script>
+      window.onload = function () {
+        var pie = document.getElementById("pie");
+        var myChart2 = echarts.init(pie);
+        var option2;
+
+        option2 = {
+          legend: {
+            top: "bottom",
+          },
+          toolbox: {
+            show: true,
+            feature: {
+              mark: { show: true },
+              dataView: { show: true, readOnly: false },
+              restore: { show: true },
+              saveAsImage: { show: true },
+            },
+          },
+          series: [
+            {
+              name: "Nightingale Chart",
+              type: "pie",
+              // radius: [50, 250],
+              center: ["50%", "50%"],
+              roseType: "area",
+              itemStyle: {
+                borderRadius: 8,
+              },
+              data: [
+                { value: 40, name: "rose 1" },
+                { value: 38, name: "rose 2" },
+                { value: 32, name: "rose 3" },
+                { value: 30, name: "rose 4" },
+                { value: 28, name: "rose 5" },
+                { value: 26, name: "rose 6" },
+                { value: 22, name: "rose 7" },
+                { value: 18, name: "rose 8" },
+              ],
+            },
+          ],
+        };
+
+        option2 && myChart2.setOption(option2);
+
+        // 柱状图
+        var chartDom = document.getElementById("frist");
+        var myChart1 = echarts.init(chartDom);
+        var option1;
+
+        option1 = {
+          xAxis: {
+            type: "category",
+            data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          },
+          yAxis: {
+            type: "value",
+          },
+          series: [
+            {
+              data: [120, 200, 150, 80, 70, 110, 130],
+              type: "bar",
+              showBackground: true,
+              backgroundStyle: {
+                color: "rgba(180, 180, 180, 0.2)",
+              },
+            },
+          ],
+        };
+        option1 && myChart1.setOption(option1);
+        /******************* 地图飞线 ******************/
+        //初始化echarts实例
+        //城市经纬度
+        const flyMap = echarts.init(document.getElementById("flyMap"));
+
+        const originName = "洛阳";
+        const flyGeo = {
+          洛阳: [112.460299, 34.62677],
+          西安: [108.946466, 34.347269],
+          兰州: [103.84044, 36.067321],
+          乌鲁木齐: [87.62444, 43.830763],
+          包头: [109.846544, 40.662929],
+          西宁: [101.78443, 36.623393],
+          银川: [106.258602, 38.487834],
+          成都: [104.081534, 30.655822],
+          重庆: [106.558434, 29.568996],
+          拉萨: [91.120789, 29.65005],
+          昆明: [102.852448, 24.873998],
+          贵阳: [106.636577, 26.653325],
+          太原: [112.534919, 37.873219],
+          武汉: [114.311582, 30.598467],
+          长沙: [112.945473, 28.234889],
+          南昌: [115.864589, 28.689455],
+          合肥: [117.233443, 31.826578],
+          杭州: [120.215503, 30.253087],
+          广州: [113.271431, 23.135336],
+          北京: [116.413384, 39.910925],
+          天津: [117.209523, 39.093668],
+        };
+        //飞线数据
+        var flyVal = [
+          [{ name: "洛阳" }, { name: "洛阳", value: 100 }],
+          [{ name: "洛阳" }, { name: "西安", value: 35 }],
+          [{ name: "洛阳" }, { name: "兰州", value: 25 }],
+          [{ name: "洛阳" }, { name: "乌鲁木齐", value: 55 }],
+          [{ name: "洛阳" }, { name: "包头", value: 60 }],
+          [{ name: "洛阳" }, { name: "西宁", value: 45 }],
+          [{ name: "洛阳" }, { name: "银川", value: 35 }],
+          [{ name: "洛阳" }, { name: "成都", value: 35 }],
+          [{ name: "洛阳" }, { name: "重庆", value: 40 }],
+          [{ name: "洛阳" }, { name: "拉萨", value: 45 }],
+          [{ name: "洛阳" }, { name: "昆明", value: 50 }],
+          [{ name: "洛阳" }, { name: "贵阳", value: 55 }],
+          [{ name: "洛阳" }, { name: "太原", value: 60 }],
+          [{ name: "洛阳" }, { name: "武汉", value: 65 }],
+          [{ name: "洛阳" }, { name: "长沙", value: 70 }],
+          [{ name: "洛阳" }, { name: "南昌", value: 75 }],
+          [{ name: "洛阳" }, { name: "合肥", value: 80 }],
+          [{ name: "洛阳" }, { name: "杭州", value: 85 }],
+          [{ name: "洛阳" }, { name: "广州", value: 90 }],
+          [{ name: "洛阳" }, { name: "北京", value: 95 }],
+          [{ name: "洛阳" }, { name: "天津", value: 60 }],
+        ];
+        //数据转换，转换后格式：[{fromName:'cityName', toName:'cityName', coords:[[lng, lat], [lng, lat]]}, {...}]
+        const convertFlyData = function (data) {
+          let res = [];
+          for (let i = 0; i < data.length; i++) {
+            let dataItem = data[i];
+            let toCoord = flyGeo[dataItem[0].name];
+            let fromCoord = flyGeo[dataItem[1].name];
+            if (fromCoord && toCoord) {
+              res.push({
+                fromName: dataItem[1].name,
+                toName: dataItem[0].name,
+                coords: [fromCoord, toCoord],
+              });
+            }
+          }
+          return res;
+        };
+        //报表配置
+        const flySeries = [];
+        [[originName, flyVal]].forEach(function (item, i) {
+          flySeries.push(
+            {
+              name: item[0],
+              type: "lines",
+              zlevel: 1,
+              symbol: ["none", "none"],
+              symbolSize: 0,
+              effect: {
+                //特效线配置
+                show: true,
+                period: 5, //特效动画时间，单位s
+                trailLength: 0.1, //特效尾迹的长度，从0到1
+                symbol: "arrow",
+                symbolSize: 5,
+              },
+              lineStyle: {
+                normal: {
+                  color: "#f19000",
+                  width: 1,
+                  opacity: 0.6,
+                  curveness: 0.2, //线的平滑度
+                },
+              },
+              data: convertFlyData(item[1]),
+            },
+            {
+              name: item[0],
+              type: "effectScatter",
+              coordinateSystem: "geo",
+              zlevel: 2,
+              rippleEffect: {
+                //涟漪特效
+                period: 5, //特效动画时长
+                scale: 4, //波纹的最大缩放比例
+                brushType: "stroke", //波纹的绘制方式：stroke | fill
+              },
+              label: {
+                normal: {
+                  show: false,
+                  position: "right",
+                  formatter: "{b}",
+                },
+              },
+              symbol: "circle",
+              symbolSize: function (val) {
+                //根据某项数据值设置符号大小
+                return val[2] / 10;
+              },
+              itemStyle: {
+                normal: {
+                  color: "#f19000",
+                },
+              },
+              data: item[1].map(function (dataItem) {
+                return {
+                  name: dataItem[1].name,
+                  value: flyGeo[dataItem[1].name].concat([dataItem[1].value]),
+                };
+              }),
+            },
+            {
+              //与上层的点叠加
+              name: item[0],
+              type: "scatter",
+              coordinateSystem: "geo",
+              zlevel: 3,
+              symbol: "circle",
+              symbolSize: function (val) {
+                //根据某项数据值设置符号大小
+                return val[2] / 15;
+              },
+              itemStyle: {
+                normal: {
+                  color: "#f00",
+                },
+              },
+              data: item[1].map(function (dataItem) {
+                return {
+                  name: dataItem[1].name,
+                  value: flyGeo[dataItem[1].name].concat([dataItem[1].value]),
+                };
+              }),
+            }
+          );
+        });
+
+        //报表配置项
+        const flyMapOpt = {
+          title: {
+            show: true,
+            text: "冲冲冲",
+            x: "center",
+            textStyle: {
+              color: "red",
+            },
+          },
+          tooltip: {
+            trigger: "item",
+            formatter: function (params) {
+              if (params.value) {
+                return params.name + " : " + params.value[2];
+              } else {
+                return params.name;
+              }
+            },
+          },
+          geo: {
+            map: "china",
+            roam: false, //开启鼠标缩放和漫游
+            zoom: 1, //地图缩放级别
+            selectedMode: false, //选中模式：single | multiple
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            layoutCenter: ["50%", "50%"], //设置后left/right/top/bottom等属性无效
+            layoutSize: "100%", //保持地图宽高比
+            label: {
+              normal: {
+                show: true,
+                color: "#fff",
+              },
+              emphasis: {
+                show: true,
+                color: "#fff",
+              },
+            },
+            // nameMap: {
+            //   China: "中国",
+            // },
+            itemStyle: {
+              normal: {
+                areaColor: "#101f32",
+                borderWidth: 1.1,
+                borderColor: "#43d0d6",
+              },
+              emphasis: {
+                areaColor: "#069",
+              },
+            },
+          },
+          series: flySeries,
+        };
+        //渲染报表
+        flyMap.setOption(flyMapOpt);
+        window.onresize = function () {
+          flyMap.resize();
+          myChart1.resize();
+          myChart2.resize();
+        };
+      };
+    </script>
   </body>
 </html>
