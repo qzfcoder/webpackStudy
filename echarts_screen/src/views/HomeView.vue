@@ -4,7 +4,7 @@
     <section class="container">
       <div class="cloumn">
         <div class="panel">
-          1
+          <bar-echart></bar-echart>
           <div class="panel-bottom"></div>
         </div>
         <div class="panel">
@@ -48,10 +48,12 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-
+import barEchart from './echarts/bar-echart.vue'
 export default {
   name: 'HomeView',
-  components: {}
+  components: {
+    barEchart
+  }
 }
 </script>
 
