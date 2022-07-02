@@ -24,6 +24,7 @@
 
         <div class="panel-down panel">
           8
+          <map-echart></map-echart>
           <div class="panel-bottom"></div>
         </div>
       </div>
@@ -49,10 +50,12 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 import barEchart from './echarts/bar-echart.vue'
+import mapEchart from './echarts/map/map-echart.vue'
 export default {
   name: 'HomeView',
   components: {
-    barEchart
+    barEchart,
+    mapEchart
   }
 }
 </script>
