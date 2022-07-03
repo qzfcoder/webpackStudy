@@ -9,27 +9,27 @@ import 'echarts/lib/component/grid'
 import chinaJson from './china.json'
 export default {
   setup() {
-    const chinaMap = ref()
     onMounted(() => {
       init()
       drawChina()
     })
     //中国地理坐标图
     var chinaGeoCoordMap = {
+      浙江: [120.153576, 30.287459],
       西安: [108.906866, 34.162109],
-      柯桥区: [120.476075, 30.078038],
+      // 柯桥区: [120.476075, 30.078038],
       拉萨: [91.140856, 29.645554],
       沈阳: [123.431474, 41.805698],
       新疆: [87.627704, 43.793026],
       台湾: [121.508903, 25.044319]
     }
     var chinaDatas = [
-      [
-        {
-          name: '柯桥区',
-          value: 0
-        }
-      ],
+      // [
+      //   {
+      //     name: '柯桥区',
+      //     value: 0
+      //   }
+      // ],
       [
         {
           name: '拉萨',
@@ -55,8 +55,8 @@ export default {
         }
       ]
     ]
-    //投射点
-    const scatterPos = [108.906866, 34.162109]
+    //投射点 (中心点)
+    const scatterPos = [120.153576, 30.287459]
     // 数据转换
     var convertData = function (data) {
       console.log(data)
@@ -81,7 +81,7 @@ export default {
     }
     var series = []
     function init() {
-      ;[['西安', chinaDatas]].forEach((item, i) => {
+      ;[['浙江', chinaDatas]].forEach((item, i) => {
         series.push(
           {
             //绘制一个新地图
@@ -126,6 +126,7 @@ export default {
           // 发射点位置涟漪等效果
           {
             type: 'effectScatter',
+            // type: 'scatter',
             coordinateSystem: 'geo',
             zlevel: 2,
             rippleEffect: {
@@ -153,6 +154,9 @@ export default {
             symbolSize: function (val) {
               return 5 + val[2] * 5 //圆环大小
             },
+            // 感叹号
+            // symbol: 'pin',
+            // symbolSize: 50,
             itemStyle: {
               normal: {
                 show: false,
@@ -160,6 +164,10 @@ export default {
               }
             },
             data: item[1].map(function (dataItem) {
+              console.log(
+                'dataItem',
+                chinaGeoCoordMap[dataItem[0].name].concat([dataItem[0].value])
+              )
               return {
                 name: dataItem[0].name,
                 value: chinaGeoCoordMap[dataItem[0].name].concat([
@@ -216,7 +224,6 @@ export default {
     function drawChina() {
       // var myChart = echarts.init(chinaMap.value)
       var myChart = echarts.init(document.getElementById('chainMap'))
-
       echarts.registerMap('china', chinaJson)
       var option = {
         tooltip: {
@@ -229,12 +236,15 @@ export default {
           transitionDuration: 0,
           extraCssText: 'z-index:100',
           formatter: function (params, ticket, callback) {
+            console.log(1231, params)
             //根据业务自己拓展要显示的内容
             var res = ''
             var name = params.name
-            var value = params.value[params.seriesIndex + 1]
+            var value = params.value[params.seriesIndex]
             res = "<span style='color:#fff;'>" + name + '</span>数据：' + value
-            return res
+            if (value) {
+              return res
+            }
           }
         },
         geo: {
@@ -265,6 +275,17 @@ export default {
               clor: '#fff'
             }
           },
+          // 给单独区域块颜色
+          regions: [
+            {
+              name: '浙江省',
+              itemStyle: {
+                normal: {
+                  areaColor: '#ffc601'
+                }
+              }
+            }
+          ],
           z: 10
         },
         series: series

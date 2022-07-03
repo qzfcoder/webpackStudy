@@ -23,7 +23,6 @@
         </div>
 
         <div class="panel-down panel">
-          8
           <map-echart></map-echart>
           <div class="panel-bottom"></div>
         </div>
