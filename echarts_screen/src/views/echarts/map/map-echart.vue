@@ -87,10 +87,10 @@ export default {
             //绘制一个新地图
             type: 'map',
             map: 'china',
-            zoom: 1,
+            zoom: 1.5,
             center: [105.194115019531, 35.582111640625],
             z: -1,
-            aspectScale: 0.75, //
+            aspectScale: 1, //
             itemStyle: {
               normal: {
                 areaColor: '#f00',
@@ -252,7 +252,8 @@ export default {
           // 设置中心点
           center: [105.19415019531, 35.582111640625],
           map: 'china',
-          zoom: 1,
+          zoom: 1.5,
+          aspectScale: 1,
           scaleLimit: {
             min: 0.1,
             max: 12
